@@ -1,0 +1,233 @@
+:root {
+  --bg: #0f1417;
+  --bg-alt: #111a1f;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #e0b84f;
+  --accent-dark: #b7902f;
+  --card: #151f25;
+  --border: #26323a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-header {
+  background: var(--bg);
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 24px;
+  background: rgba(15, 20, 23, 0.9);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  font-size: 0.95rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("assets/hero.png") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,20,23,0.35), rgba(15,20,23,0.85));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 120px 24px;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  margin: 12px 0 10px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section.alt {
+  background: var(--bg-alt);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid.three {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+}
+
+.highlight {
+  background: linear-gradient(160deg, #1b2a33, #10181d);
+}
+
+.list { list-style: none; padding: 0; margin: 0; }
+.list li { margin: 8px 0; color: var(--muted); }
+
+.time {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.event {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(15,20,23,0.6);
+}
+
+.event-date {
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  background: #0f171c;
+}
+
+.event-date strong { display: block; color: var(--accent); }
+.event-date em { font-size: 1.4rem; font-style: normal; }
+
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 18px; }
+
+.map-card iframe {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  border-radius: 16px;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  background: #0b0f12;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-links { display: flex; gap: 16px; color: var(--muted); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #1d1b12;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.btn:hover { background: var(--accent-dark); }
+
+.btn-light {
+  background: #f8fafc;
+  color: #0f1417;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+
+.text-link { color: var(--accent); font-weight: 600; }
+
+.muted { color: var(--muted); }
+
+@media (max-width: 900px) {
+  .nav { flex-wrap: wrap; justify-content: center; }
+}
