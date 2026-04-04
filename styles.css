@@ -1,12 +1,12 @@
 :root {
-  --bg: #0f1417;
-  --bg-alt: #111a1f;
+  --bg: #0d0e1c;
+  --bg-alt: #10122a;
   --text: #f8fafc;
-  --muted: #cbd5e1;
-  --accent: #e0b84f;
-  --accent-dark: #b7902f;
-  --card: #151f25;
-  --border: #26323a;
+  --muted: #c4c9e2;
+  --accent: #8b5cf6;
+  --accent-dark: #7c3aed;
+  --card: #13152e;
+  --border: #2a2d52;
 }
 
 * { box-sizing: border-box; }
@@ -40,7 +40,7 @@ a { color: inherit; text-decoration: none; }
   justify-content: space-between;
   gap: 24px;
   padding: 18px 24px;
-  background: rgba(15, 20, 23, 0.9);
+  background: rgba(13, 14, 28, 0.9);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
 }
@@ -78,7 +78,7 @@ a { color: inherit; text-decoration: none; }
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15,20,23,0.2), rgba(15,20,23,0.6));
+  background: linear-gradient(180deg, rgba(13,14,28,0.2), rgba(13,14,28,0.6));
 }
 
 .hero-content {
@@ -147,7 +147,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .highlight {
-  background: linear-gradient(160deg, #1b2a33, #10181d);
+  background: linear-gradient(160deg, #1a1a42, #0f1033);
 }
 
 .list { list-style: none; padding: 0; margin: 0; }
@@ -168,7 +168,7 @@ a { color: inherit; text-decoration: none; }
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  background: rgba(15,20,23,0.6);
+  background: rgba(13,14,28,0.6);
 }
 
 .event-date {
@@ -176,7 +176,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 10px;
-  background: #0f171c;
+  background: #0d0e24;
 }
 
 .event-date strong { display: block; color: var(--accent); }
@@ -194,7 +194,7 @@ a { color: inherit; text-decoration: none; }
 .footer {
   border-top: 1px solid var(--border);
   padding: 32px 0;
-  background: #0b0f12;
+  background: #090a18;
 }
 
 .footer-inner {
@@ -213,7 +213,7 @@ a { color: inherit; text-decoration: none; }
   padding: 12px 18px;
   border-radius: 999px;
   background: var(--accent);
-  color: #1d1b12;
+  color: #f8fafc;
   font-weight: 600;
   border: 1px solid transparent;
   transition: 0.2s ease;
